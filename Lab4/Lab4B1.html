@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Danh sách sinh viên</title>
+	<script>
+		// Tạo class Student và các phương thức của nó
+
+		class Student {
+			constructor(id, first_name, last_name, class_id, email, phone_number, dob) {
+				this.id = id;
+				this.first_name = first_name;
+				this.last_name = last_name;
+				this.class_id = class_id;
+				this.email = email;
+				this.phone_number = phone_number;
+				this.dob = dob;
+			}
+
+			getFullName() {
+				return this.last_name + ' ' + this.first_name;
+			}
+
+			getAgeInYears() {
+				const now = new Date();
+				const dob = new Date(this.dob);
+				const diff = now - dob;
+				return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));//Math.floor() để lấy phần nguyên của kết quả.
+                // diff dơn vị miligiaay
+			}
+
+			getAgeInDays() {
+				const now = new Date();
+				const dob = new Date(this.dob);
+				const diff = now - dob;
+				return Math.floor(diff / (1000 * 60 * 60 * 24));
+			}
+		}
+
+		// Tạo danh sách sinh viên và sắp xếp theo tuổi
+
+		const students = [
+			new Student(1, 'Nguyễn', 'Văn A', 'A1', 'a@gmail.com', '123456789', '2002-01-01'),
+			new Student(2, 'Trần', 'Thị B', 'A1', 'b@gmail.com', '234567890', '2001-12-31'),
+			new Student(3, 'Lê', 'Văn C', 'A2', 'c@gmail.com', '345678901', '2001-05-15'),
+			new Student(4, 'Phạm', 'Thị D', 'A2', 'd@gmail.com', '456789012', '2002-07-20'),
+			new Student(5, 'Võ', 'Văn E', 'A3', 'e@gmail.com', '567890123', '2001-10-10')
+		];
+
+		students.sort((a, b) => {
+			return a.getAgeInDays() - b.getAgeInDays();
+		});
+
+		// In danh sách sinh viên lên trang HTML
+
+		window.onload =	function () {
+		// Lấy thẻ ul để chèn danh sách sinh viên vào
+		const ul = document.getElementById('student-list');
+
+		// Duyệt qua danh sách sinh viên và tạo các thẻ li chứa thông tin của từng sinh viên
+		for (const student of students) {
+			const li = document.createElement('li');
+
+			const fullName = document.createElement('span');
+			fullName.textContent = student.getFullName() + ' - ';
+
+			const ageInYears = document.createElement('span');
+			ageInYears.textContent = student.getAgeInYears() + ' tuổi';
+
+			li.appendChild(fullName);
+			li.appendChild(ageInYears);
+
+			ul.appendChild(li);
+		}
+
+		// In thông tin BOM lên trang HTML
+		const width = window.innerWidth;
+		const height = window.innerHeight;
+
+		const info = document.getElementById('bom-info');
+		info.innerHTML = 'Kích thước màn hình là ' + width + ' x ' + height + ' pixel.';
+	};
+</script>
+</head>
+<body>
+	<h1>Danh sách sinh viên</h1>
+	<ul id="student-list"></ul>
+	<p id="bom-info"></p>
+</body>
+</html>
