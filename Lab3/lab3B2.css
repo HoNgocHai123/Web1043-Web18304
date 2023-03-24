@@ -18,7 +18,7 @@
 .table input{
     padding: 5px;
     margin: 2px;
-    width: 3em;
+    width: 38px;
 }
 .table>:hover{
     background:  wheat;
