@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./sty.js"></script>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/a77s-en/topbanner/a77s-blue-2880_1440-v2.jpg.thumb.webp">
+            <div class="caption"> 1/3</div>
+          </div>
+          <div class="slide">
+            <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno8-t-en/topbanner/reno8-t_2880_1440_2.jpg.thumb.webp">
+            <div class="caption"> 2/3</div>
+          </div>
+          <div class="slide">
+            <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/oppo-pad-air-en/topbanner/oppo-pad-air-2880x1440.jpg.thumb.webp">
+            <div class="caption">3/3</div>
+          </div>
+        </div>
+        <div class="dots"><span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span></div>
+        <a class="prev" onclick="prevSlide()">&#10094;</a>
+        <a class="next" onclick="nextSlide()">&#10095;</a>
+      </div>
+</body>
+<script>
+    var slideIndex = 0;
+  
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";   
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  
+    // gọi hàm showSlides() mỗi 3 giây
+    setInterval(showSlides, 1000);
+  </script>
+</html>
