@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO LIST</title>
+	<!-- Thêm các thư viện CSS và JavaScript cần thiết -->
+    <link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<form id="add-task-form">
+			<h1 style="text-align: center;">TODO LIST</h1>
+			<div class="mb-3 mt-3">
+				<label for="name" class="form-label">Tên task:</label>
+				<input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+			</div>
+			<div class="mb-3 mt-3">
+				<label for="mota" class="form-label">Mô tả:</label>
+				<input type="text" class="form-control" id="mota" placeholder="Enter MOTA" name="mota">
+			</div>
+			<button type="submit" class="btn btn-primary">ADD</button>
+		</form>
+		<ul id="task-list">
+			<!-- Danh sách các task sẽ được thêm vào đây -->
+		</ul>
+	</div>
+
+	<script>
+		// Lấy các phần tử cần sử dụng
+		var addTaskForm = document.getElementById("add-task-form");
+		var taskList = document.getElementById("task-list");
+
+		// Thêm sự kiện submit vào form
+		addTaskForm.addEventListener("submit", function(event) {
+			event.preventDefault(); // Ngăn chặn form submit đi
+			var nameInput = document.getElementById("name");
+			var motaInput = document.getElementById("mota");
+			var name = nameInput.value;
+			var mota = motaInput.value;
+			// Kiểm tra xem tên và mô tả có đủ điều kiện không
+			if (name.length < 5 || mota.length < 20) {
+				alert("Tên phải có ít nhất 5 kí tự, mô tả phải có ít nhất 20 kí tự");
+			} else {
+				// Tạo phần tử li mới và thêm vào danh sách
+				var li = document.createElement("li");
+				var taskName = document.createElement("span");
+				var taskMota = document.createElement("span");
+				var editButton = document.createElement("button");
+				var deleteButton = document.createElement("button");
+				taskName.innerText = name;
+				taskMota.innerText = mota;
+				editButton.innerText = "Sửa";
+				deleteButton.innerText = "Xóa";
+				editButton.classList.add("btn", "btn-warning", "mx-2");
+				deleteButton.classList.add("btn", "btn-danger");
+				editButton.addEventListener("click", function() {
+					// Sử dụng hộp thoại prompt để cho người dùng nhập tên và mô tả mới
+					var newName = prompt("Nhập tên mới:", name);
+					var newMota = prompt("Nh.ập mô tả mới:", mota);
+// Kiểm tra xem tên và mô tả mới có đủ điều kiện không
+if (newName !== null && newMota !== null && newName.length >= 5 && newMota.length >= 20) {
+taskName.innerText = newName;
+taskMota.innerText = newMota;
+} else {
+alert("Tên phải có ít nhất 5 kí tự, mô tả phải có ít nhất 20 kí tự");
+}
+});
+deleteButton.addEventListener("click", function() {
+// Xóa phần tử li khỏi danh sách
+li.remove();
+alert('xóa thành công')
+});
+li.appendChild(taskName);
+li.appendChild(document.createElement("br"));
+li.appendChild(taskMota);
+li.appendChild(editButton);
+li.appendChild(deleteButton);
+taskList.appendChild(li);
+
+
+// Reset form
+addTaskForm.reset();
+alert('thêm thành công')
+}
+});
+</script>
+
+</body>
+</html>
