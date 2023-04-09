@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6m8sv2FrVmb+ZPvJFVlxBudK+3hsqCkN1f2gjJ+/5D9Xix+ay/5ZjKt1WuslbJrknx3H0IrsQ5j5ZW5D5X9A7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>POCO MART</title>
+<script src="./style.js"></script>
+    
+</head>
+<body>
+    <section class="header">
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-3">
+           <img src="https://1.bp.blogspot.com/-1JPaVHUJnGU/YOQeX2ylZII/AAAAAAAAFa0/2jJttGEW6f0fqL8KEAc6HLWFf3m0JILzACLcBGAsYHQ/logo.png" class="rounded img-fluid" alt="">
+        </div>
+        <div class="col-md-4">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
+    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+  </div>
+</form>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col">
+                   <div class="row">
+                    <div class="col-3 fs-3 text-danger">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="col-9">
+                        Tư vấn<br>
+                       <strong class="text-danger">1900 1189</strong>
+                    </div>
+                   </div>          
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-3 fs-3 text-danger">
+                                  <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="col-9">Bảo Hành<br>
+                                  <strong class="text-danger">1900 1189</strong>
+                        </div>
+                       </div>          
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 fs-3">
+                <i class="fa-regular fa-user"></i> <span class="badge bg-danger">4</span>
+
+        </div>
+        </div>
+   
+    </div>
+</div>
+    </section>
+    <!-- PHẦN MENU -->
+    <nav>
+      <ul >
+          <li class="dropdown"><a href="#" class="dropbtn" ><i class="fa-solid fa-bars"></i>Danh Mục Sản Phẩm</a>
+              <div class="dropdown-content">
+                <a href="#">Danh mục 1</a>
+                <a href="#">Danh mục 2</a>
+                <a href="#">Danh mục 3</a>
+              </li>
+              </div>
+               <li class="text"><a href="./index.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+               <li><a href="./giơithieu.html">Giới Thiệu</a></li>
+               <li ><a href="./product.html">Sản phẩm</a></li>
+               <li><a href="./login.html">Đăng nhập</a></li>
+       
+        
+      </ul>
+    </nav>
+    <!-- Phần Heder -->
+   <div class="container">
+    <section> <div class="slider" style="height: 700px;">
+      <div class="slides">
+        <div class="slide">
+          <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/a77s-en/topbanner/a77s-blue-2880_1440-v2.jpg.thumb.webp">
+          <div class="caption"> 1/3</div>
+        </div>
+        <div class="slide">
+          <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno8-t-en/topbanner/reno8-t_2880_1440_2.jpg.thumb.webp">
+          <div class="caption"> 2/3</div>
+        </div>
+        <div class="slide">
+          <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/oppo-pad-air-en/topbanner/oppo-pad-air-2880x1440.jpg.thumb.webp">
+          <div class="caption">3/3</div>
+        </div>
+      </div>
+      <div class="dots"><span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span></div>
+      <a class="prev" onclick="prevSlide()">&#10094;</a>
+      <a class="next" onclick="nextSlide()">&#10095;</a>
+    </div>
+    <div class="chu" style="position: absolute; margin-left: 350px;">
+      <h1  style="font-style: italic;font-weight: bold;color: rgb(202, 9, 122);font-size: 55px;margin-top: -500px;margin-left: -150px;">CÔNG TY TNHH  VÀ KỸ THUẬT OPPO</h1><br>
+      <p style="font-size: 30px;margin-top:-10px ;margin-left: 190px;color: rgb(38, 0, 255);">Shop hân hạnh chào đoán</p>
+      <button style="position: absolute; margin-top: 0px;margin-left: 300px;" class="btn btn-outline-primary">xem thêm</button>
+   </div>
+    </section>
+   </div>
+</body>
+</section>
+    <!-- Phần Sản Phẩm -->
+    
+    <section class="sanpham">
+      <div class="sanphamct" style="margin-top: 20px;"><h1>Sản Phẩm của Tôi</h1></div>
+<div class="container" style="margin-top: 0px;">
+  <!-- sản phẩm oppo -->
+  <div class="row">
+    <div class="col-md-3 ">
+      <div class="card" style="width:300px;object-fit: cover;">
+          <img class="card-img-top product" src="./img/oppo 9.jpg" alt="Card image" style="height: 200px;">
+          <div class="card-body">
+            <h4>oppo</h4>
+            <p ></p>
+            <span><i class="fas fa-dollar-sign"></i>9.000.000</span><br>
+            <button class="btn btn-primary">Mua</button>
+          </div>
+        </div>
+  </div>
+  <div class="col-md-3 ">
+    <!-- card  giúp hiển thị thông tin -->
+    <div class="card" style="width:300px;object-fit: cover;">
+        <img class="card-img-top product" src="./img/oppo 10.jpg" alt="Card image" style="height: 200px;">
+        <div class="card-body">
+          <!-- được sử dụng để chứa nội dung trong "card" như tiêu đề, 
+            mô tả hoặc bất kỳ thông tin nào mà bạn muốn hiển thị -->
+          <h4>oppo</h4>
+          <p ></p>
+          <span><i class="fas fa-dollar-sign"></i>14.000.000</span><br>
+          <button class="btn btn-primary">Mua</button>
+          <!--btn btn-primary được sử dụng để định dạng nút này với màu nền và màu chữ  -->
+        </div>
+      </div>
+</div>
+<div class="col-md-3 ">
+  <div class="card" style="width:300px;object-fit: cover;">
+      <img class="card-img-top product" src="./img/11.jpg" alt="Card image" style="height: 200px;">
+      <div class="card-body">
+        <h4>oppo</h4>
+        <p ></p>
+        <span><i class="fas fa-dollar-sign"></i>12.000.000</span><br>
+        <button class="btn btn-primary">Mua</button>
+      </div>
+    </div>
+</div>
+<div class="col-md-3 ">
+  <div class="card" style="width:300px;object-fit: cover;">
+      <img class="card-img-top product" src="./img/12.jpg" alt="Card image" style="height: 200px;">
+      <div class="card-body">
+        <h4>oppo</h4>
+        <p ></p>
+        <span><i class="fas fa-dollar-sign"></i>7.000.000</span><br>
+        <button class="btn btn-primary">Mua</button>
+      </div>
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-3 ">
+      <div class="card" style="width:300px;object-fit: cover;">
+          <img class="card-img-top product" src="./img/13.jpg" alt="Card image" style="height: 200px;">
+          <div class="card-body">
+            <h4>oppo</h4>
+            <p ></p>
+            <span><i class="fas fa-dollar-sign"></i>4.000.000</span><br>
+            <button class="btn btn-primary">Mua</button>
+          </div>
+        </div>
+  </div>
+  <div class="col-md-3 ">
+    <div class="card" style="width:300px;object-fit: cover;">
+        <img class="card-img-top product" src="./img/14.jpg" alt="Card image" style="height: 200px;">
+        <div class="card-body">
+          <h4>oppo</h4>
+          <p ></p>
+          <span><i class="fas fa-dollar-sign"></i>5.000.000</span><br>
+          <button class="btn btn-primary">Mua</button>
+        </div>
+      </div>
+</div>
+<div class="col-md-3 ">
+  <div class="card" style="width:300px;object-fit: cover;">
+      <img class="card-img-top product" src="./img/15.jpg" alt="Card image" style="height: 200px;">
+      <div class="card-body">
+        <h4>oppo</h4>
+        <p ></p>
+        <span><i class="fas fa-dollar-sign"></i>7.000.000</span><br>
+        <button class="btn btn-primary">Mua</button>
+      </div>
+    </div>
+</div>
+<div class="col-md-3 ">
+  <div class="card" style="width:300px;object-fit: cover;">
+      <img class="card-img-top product" src="./img/16.jpg" alt="Card image" style="height: 200px;">
+      <div class="card-body">
+        <h4>oppo</h4>
+        <p ></p>
+        <span><i class="fas fa-dollar-sign"></i>3.000.000</span><br>
+        <button class="btn btn-primary">Mua</button>
+      </div>
+    </div>
+</div>
+  </div>
+</div>
+<!-- Phần Tin Tức -->
+    </section>
+    <section class="tintuc">
+<div class="container claimg">
+<div class="mt-3">
+    <h1>Tin Tức</h1>
+</div>
+<div class="row">
+    <div class="col-md-3 ">
+        <div class="card" style="width:300px;object-fit: cover;">
+            <img class="card-img-top product" src="./img/17.jpg" alt="Card image" style="height: 200px;">
+            <div class="card-body">
+              <h4>oppo</h4>
+              <p >Đặt trước OPPO Find N2 Flip: Nhận quà HOT, thu cũ đổi mới trợ giá 1 triệu và nhiều nữa</p>
+              <span>08/12/2023</span>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" style="width:300px;object-fit: cover; ">
+        <img class="card-img-top product" src="./img/18.jpg" alt="Card image" style="height: 200px;">
+        <div class="card-body">
+          <h4>oppo</h4>
+          <p >Minigame: Mở Gương Thần - Săn Find N2 Flip sớm nhất Việt Nam, tham gia ngay!</p>
+          <span>06/2/2023</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" style="width:300px;object-fit: cover;">
+        <img class="card-img-top product" src="./img/19.jpg" alt="Card image" style="height: 200px;">
+        <div class="card-body">
+          <h4>oppo</h4>
+          <p >Điện thoại báo đầy bộ nhớ? Đừng lo đây là cách khắc phục cực đơn giản nhưng hiệu quả</p>
+          <span>16/3/2023</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" style="width:300px;object-fit: cover;">
+        <img  class="card-img-top product"  src="./img/20.jpg" alt="Card image" style="height: 200px;">
+        <div class="card-body">
+          <h4>oppo</h4>
+          <p >Hé lộ thiết kế cụm camera trên OPPO Reno10 Series, liệu có thành trend năm nay?</p>
+          <span>10/5/2023</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      
+        
+      </div>
+      
+    </div>
+    
+</div>
+</div>
+    </section>
+    <section>
+      <div>
+        <img src="./img/find-n2-flip-2880_1440.jpg.thumb.webp" alt="" width="100%"; height="500px">
+        <div class="onclick" id="clock"></div>
+        
+
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="clock"
+        document.getElementById("clock").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("clock").innerHTML = "EXPIRED";
+          document.getElementById("message").innerHTML = "Happy New Year!";
+        }
+      }, 1000);
+    </script>
+      </div>
+    </section>
+    
+
+    <!-- foooter -->
+    <section class="footer">
+<div class="container-fluid mt-3 ">
+<div class="row bg-dark text-muted p-3 content">
+ 
+    <div class="col-md-3 content" >
+        <h4>HỔ TRỢ DỊCH VỤ</h4>
+    </div>
+    <div class="col-md-3">
+        <h4>THÔNG TIN LIÊN HỆ</h4>
+    </div>
+    <div class="col-md-3">
+       <h4> HỆ THỐNG TỔNG ĐÀI</h4>
+    </div>
+    <div class="col-md-3">
+       <h4>THANH TOÁN MIỄN PHÍ</h4>
+    </div>
+</div>
+
+<div class="row bg-dark text-muted font-size " >
+    <div class="col-md-3 hm">
+    <a href="">Mua hàng trả góp</a><br>
+    <a href="">Hướng dẫn đặt hàng và thanh toán</a><br>
+    <a href="">Tra cứu dơn hàng</a><br>
+    <a href="">Chính sách bảo hàng</a><br>
+    <a href="">Hàng mở rộng</a><br>
+    <a href="">Chính sách bảo mật</a><br>
+    </div>
+    <div class="col-md-3 hn">
+      <a href="">Bán hang online</a><br>
+      <a href="">Chăm sóc khách hàng</a><br>
+      <a href="">Hỗ trợ kỹ thuật</a><br>
+      <a href="">Hỗ trợ bảo hành & sữa chữa</a><br>
+      <a href="">Trung tăm bảo hành</a>
+    </div>
+    <div class="col-md-2 bg">
+      <h2>1900.2091</h2>
+    </div>
+    <div class="col-md-4 boder">
+      <div class="row ">
+        <div class="col-md-2">
+          <a href=""><img src="./img/images.png" alt="" style="width: 80px; margin-left: 160px; height: 40px;"></a>
+          <a  href=""><img src="./img/images.jpg" alt="" style="width: 80px; margin-left: 160px; height: 42px;margin-top: 7px;"></a>
+        </div>
+        <div class="col-md-2 mg">
+          <a href=""><img src="./img/tải xuống.jpg" alt="" style="width: 80px; margin-left: 170px; height: 39px;"></a>
+          <a href=""><img src="./img/tải xuống.png" alt="" style="width: 80px; margin-left: 170px; height: 43px; margin-top: 7px;"></a>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+</div>
+<div class="container-fuid text-center contin ">
+  <div class="row bg-dark text-muted p-3">
+ <p> © 2011 Internship.edu.vn - Dự án quản lý bởi Talent Mind Education Ltd. Co.</p>
+ <p> Giấy phép ĐKKD số 0309910614 cấp bởi Sở Kế hoạch và Đầu tư TP Hồ Chí Minh</p>
+ <p> Hotline: 028 - 3515 0635, 0974 030 635 - contact@internship.edu.vn</p>
+</div>
+</div>
+
+</div>
+    </section>
+ 
+</body>
+
+</html>
